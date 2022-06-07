@@ -3,12 +3,14 @@ const bodyParser = require('body-parser');
 const app = express();
 const ejs = require('ejs');
 
-app.set('view engine', 'ejs');
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get('/', async function (req, res) {
+app.set('view engine', 'ejs');
+
+app.get('/', function (req, res) {
  res.render('index')
 })
 
@@ -54,6 +56,6 @@ app.get('/weather', async function (req, res) {
 })
 
 
-app.listen(process.env.Port || 3000, function () {
-  console.log("Express app running on port", + (process.env.Port || 3000))
+app.listen(process.env.PORT || 3000, function () {
+  console.log('Express app running on port ' + (process.env.PORT || 3000))
 });
