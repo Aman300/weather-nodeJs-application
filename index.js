@@ -8,14 +8,14 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get('/whether', async function (req, res) {
+app.get('/', async function (req, res) {
  res.render('index')
 })
 
 
 const axios = require('axios');
 
-app.get('/', async function (req, res) {
+app.get('/weather', async function (req, res) {
 
   try {
 
@@ -41,7 +41,7 @@ app.get('/', async function (req, res) {
     let result = await axios(options)
     let filter = result.data
     let fewData = filter.main
-    let filterTemp = fewData.temp
+    //let filterTemp = fewData.temp
   
      
           res.render('indexx', { data: filter })
