@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const ejs = require('ejs');
+const moment = require('moment')
 
 
 
@@ -24,29 +25,30 @@ app.get('/weather', async function (req, res) {
     let stateName = req.query.stateName
     const options = {
       method: 'GET',
-      url: 'https://community-open-weather-map.p.rapidapi.com/weather',
-      params: {
-        q: stateName,
-        //   lat: '0',
-        //   lon: '0',
-        //   callback: 'test',
-        //   id: '2172797',
-        //   lang: 'null',
-        units: 'metric',
+      url: `http://api.openweathermap.org/data/2.5/weather?q=${stateName}&units=metric&appid=4a95cd1c9a3a4dca54c0869ead637566`,
+      // params: {
+      //   q: stateName,
+      //   //   lat: '0',
+      //   //   lon: '0',
+      //   //   callback: 'test',
+      //   //   id: '2172797',
+      //   //   lang: 'null',
+      //   units: 'metric',
 
-      },
-      headers: {
-        'X-RapidAPI-Host': 'community-open-weather-map.p.rapidapi.com',
-        'X-RapidAPI-Key': '3739cc291bmshac6f35389dbf739p1ead3ajsnb07b98818ff5'
-      }
+      // },
+      // headers: {
+      //   //'X-RapidAPI-Host': 'community-open-weather-map.p.rapidapi.com',
+      // 'appid' : '4a95cd1c9a3a4dca54c0869ead637566'
+      // }
     };
     let result = await axios(options)
     let filter = result.data
-    let fewData = filter.main
+    //let fewData = filter.main
     //let filterTemp = fewData.temp
   
-     
-          res.render('indexx', { data: filter })
+          let time = moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
+          res.render('indexx', { data: filter, value: time})
+          console.log({value: time})
 
 
   } catch (err) {
