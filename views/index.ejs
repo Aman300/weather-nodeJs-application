@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="icon" href="https://classroom-training-bucket.s3.ap-south-1.amazonaws.com/abc/IMG_20220529_164956_573.jpg"
-  type="image/x-icon">
+    type="image/x-icon">
 
 
   <!-- Bootstrap CSS -->
@@ -18,23 +18,24 @@
     h1 {
       text-align: center;
       color: white;
-      font-size: 70px;
+      font-size: 50px;
       font-weight: bold;
     }
 
     span {
       color: red;
     }
+
     img {
 
       text-align: center;
-      width: 40%;
+      width: 10px
+    }
 
-      }
-      body{
-        font-family: 'Basic';font-size: 22px;
-        background-image: linear-gradient(rgb(113, 231, 113), rgb(255, 255, 12), rgb(113, 231, 113));
-      }
+    body {
+      font-family: 'Basic';
+      background-image: linear-gradient(rgb(113, 231, 113), rgb(255, 255, 12), rgb(113, 231, 113));
+    }
 
     /* .jumbotron {
       background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20190222/ourmid/pngtree-fresh-blue-sea-and-blue-sky-banner-background-paintedfresh-backgroundbanner-backgroundsea-image_53272.jpg');
@@ -47,31 +48,66 @@
       background-image: url('https://cutewallpaper.org/21/stormy-weather-backgrounds/Stormy-Weather-Twitter-Headers-Landscape-wallpaper-.jpg');
       background-size: cover;
     } */
+    .form-control{
+      border-radius: 50px;
+      padding: 30px 60px;
+      border: none;
+      }
+      .btn{
+      border-radius: 50px;
+      padding: 13px 40px;
+      border: none;
+      
+      }
+
+    @media (min-width: 1440px) {
+      img {
+
+        text-align: center;
+        width: 30%;
+
+      }
+    }
 
     @media (max-width: 480px) {
       body {
         background-image: linear-gradient(rgb(113, 231, 113), rgb(255, 255, 12), rgb(113, 231, 113));
-        font-family: 'Basic';font-size: 22px;
+        font-family: 'Basic';
+        font-size: 22px;
 
       }
-      h1{
-        font-size: 60px;
-      }    
-      h4{
-        font-size: 20px;
-      } 
+
+      h1 {
+        font-size: 40px;
+      }
+
+      h4 {
+        font-size: 15px;
+      }
+
       img {
 
-      text-align: center;
-      width: 80%;
+        text-align: center;
+        width: 80%;
 
-      } 
+      }
+      .form-control{
+      border-radius: 50px;
+      padding: 20px 40px;
+      font-size: 20px;
+    }
 
-      
+    .btn{
+      border-radius: 50px;
+      padding: 12px 30px;
+      border: none;
+      background-image: rgb(235, 239, 16);
+      }
+
+
 
 
     }
-
   </style>
 </head>
 
@@ -84,15 +120,15 @@
   <div class="container">
     <form action="/weather" method="get">
       <div class="form-group text-center">
-        <h2>Find weather  details</h2><br>
-        <img src="https://www.pngall.com/wp-content/uploads/11/Weather-No-Background.png" alt="">
+        <h2>Find weather details</h2><br>
+        <img src="https://www.pngall.com/wp-content/uploads/11/Weather-No-Background.png" class="img-fluid">
         <br><br><br>
-        <input type="text" name="stateName" id="" class="form-control" placeholder="state name "
-          aria-describedby="helpId" required><br><br>
+        <input type="text" name="stateName" id="" class="form-control" placeholder="city name "
+          aria-describedby="helpId" required><br>
         <button href="" type="submit" class="btn btn-success btn-lg">get weather </button>
       </div>
     </form>
-  </div><br><br><br><br><br><br>
+  </div><br><br><br><br>
 
   <div class="p-5 container-fluid text-center text-white bg-dark">
     <h4>copyright © 2022 all rights reserved by Aman kumar</f4>

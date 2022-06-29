@@ -17,13 +17,14 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   <style>
-     h2 {
+    h2 {
       text-align: center;
       color: black;
       font-size: 60px;
       font-weight: bold;
     }
-    h2{
+
+    h2 {
       color: rgb(255, 255, 255);
     }
 
@@ -58,11 +59,15 @@
     h4,
     p {
       font-size: 30px;
-      color: rgb(251, 244, 244);
+      color: rgb(245, 244, 251);
     }
 
     h6 {
       color: black;
+    }
+
+    h2{
+      font-size: 40px;
     }
 
     @media (max-width: 480px) {
@@ -79,13 +84,14 @@
       }
 
       img {
-        width: 100%;
+        width: 50%;
       }
 
-      h1 {
-        font-size: 30px;
+      h1,h3 {
+        font-size: 15px;
         font-weight: bold;
       }
+
 
 
     }
@@ -99,19 +105,48 @@
 
 
 <div class="container p-2 " style="border-radius: 40px;">
-  <div class="card text-left">
+  <div class="card  ">
     <img class="card-img-top" src="holder.js/100px180/" alt="">
     <div class="card-body">
       <div class="container text-center ">
         <h1>
           <%= data.name%>
-        </h1><hr>
-        <%= value%>
-        <br><br>
-        <img src="https://www.pngall.com/wp-content/uploads/11/Weather-No-Background.png" alt="">
-        <br><br>
+        </h1>
         <hr>
-        <h1>
+        <%= value%>
+          <br><br>
+          <img src="https://www.pngall.com/wp-content/uploads/11/Weather-No-Background.png" alt="">
+          <br><br>
+          <hr>
+          <div class="container-fluid sm">
+            <div class="row">
+              <div class="col-xl-3 col-6">
+                <h1>Temperature</h1>
+                <h3>
+                  <%= data.main.temp%> °C
+                </h3>
+              </div>
+              <div class="col-xl-3 col-6">
+                <h1> Feels like</h1>
+                <h3>
+                  <%= data.main.feels_like %>
+                </h3>
+              </div>
+              <div class="col-xl-3 col-6">
+                <h1>Humidity</h1>
+                <h3>
+                  <%= data.main.humidity %> %
+                </h3>
+              </div>
+              <div class="col-xl-3 col-6">
+                <h1>Pressure</h1>
+                <h3>
+                  <%= data.main.pressure %> in
+                </h3>
+              </div>
+            </div>
+          </div>
+          <!-- <h1>
           temp :  <%= data.main.temp%> °C
         </h1>
         <hr>
@@ -125,15 +160,16 @@
         <hr>
         <h1>
           pressure :  <%= data.main.pressure %> in
-        </h1>
+        </h1> -->
       </div>
     </div>
   </div>
-  </div><br><br><br>
+</div><br><br><br>
 
-  <div class="p-5 container-fluid text-center text-white bg-dark">
-    <h4>copyright © 2022 all rights reserved by Aman kumar
-  </h4></div>
+<div class="p-5 container-fluid text-center text-white bg-dark">
+  <h4>copyright © 2022 all rights reserved by Aman kumar
+  </h4>
+</div>
 
 
 <!-- Op
