@@ -17,6 +17,7 @@ app.get('/', function (req, res) {
 
 
 const axios = require('axios');
+const { get } = require('mongoose');
 
 app.get('/weather', async function (req, res) {
 
@@ -56,6 +57,30 @@ app.get('/weather', async function (req, res) {
   }
 
 })
+
+
+app.get("/get", async (req,res) =>{
+  try{
+    
+
+      let obj = {
+        method: "GET",
+        url:'https://api.countrystatecity.in/v1/countries/IN/states'
+      };
+
+      const response = await axios(obj)
+      res.status(200).send({
+        country_name: JSON.parse(JSON.stringify(response.data)
+        )});
+  
+  }catch(err){
+    res.status(500).send({message: err.message})
+  }
+})
+
+
+
+
 
 
 app.listen(process.env.PORT || 3000, function () {
