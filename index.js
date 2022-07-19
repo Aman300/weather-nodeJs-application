@@ -43,13 +43,16 @@ app.get('/weather', async function (req, res) {
       // }
     };
     let result = await axios(options)
+
     let filter = result.data
+    // console.log(filter.weather)
+    
     //let fewData = filter.main
     //let filterTemp = fewData.temp
   
           let time = moment().format("dddd, MMMM Do YYYY");
           res.render('weatherData', { data: filter, value: time})
-          console.log({value: time})
+          // console.log({value: time})
 
 
   } catch (err) {
