@@ -48,7 +48,7 @@ app.get('/weather', async function (req, res) {
     //let filterTemp = fewData.temp
   
           let time = moment().format("dddd, MMMM Do YYYY");
-          res.render('indexx', { data: filter, value: time})
+          res.render('weatherData', { data: filter, value: time})
           console.log({value: time})
 
 

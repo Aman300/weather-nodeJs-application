@@ -3,106 +3,8 @@
 
 <head>
   <title>Aman weather api</title>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <link href='https://fonts.googleapis.com/css?family=Basic' rel='stylesheet'>
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no, user-scalable=0" />
-
-  <link rel="icon" href="https://classroom-training-bucket.s3.ap-south-1.amazonaws.com/abc/IMG_20220529_164956_573.jpg"
-    type="image/x-icon">
-
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-  <style>
-    h2 {
-      text-align: center;
-      color: black;
-      font-size: 60px;
-      font-weight: bold;
-    }
-
-    h2 {
-      color: rgb(255, 255, 255);
-    }
-
-    span {
-      color: red;
-    }
-
-
-
-    .card {
-      box-shadow: 0 15px 25px rgba(27, 24, 24, 0.2);
-      border-radius: 50px;
-      backdrop-filter: blur(14px);
-      background-color: rgba(255, 255, 255, 0.24);
-
-    }
-
-    body {
-      background-image: linear-gradient(rgb(113, 231, 113), rgb(255, 255, 12), rgb(113, 231, 113));
-
-      background-attachment: fixed;
-      font-family: 'Basic';
-    }
-
-    img {
-
-      text-align: center;
-      width: 30%;
-
-    }
-
-    h4,
-    p {
-      font-size: 30px;
-      color: rgb(245, 244, 251);
-    }
-
-    h6 {
-      color: black;
-    }
-
-    h2{
-      font-size: 40px;
-    }
-
-    @media (max-width: 480px) {
-
-      h4,
-      p {
-        font-size: 15px;
-        color: rgb(255, 255, 255);
-      }
-
-      h6 {
-        color: black;
-        font-size: 10px;
-      }
-
-      img {
-        width: 50%;
-      }
-
-      h1,h3 {
-        font-size: 15px;
-        font-weight: bold;
-      }
-
-
-
-    }
-  </style>
-</head>
-<div class="jumbotron jumbotron bg-dark">
-  <div class="container">
-    <h2 class="display"><span>A</span>man<span> W</span>eather <span> API</span></h2>
-  </div>
-</div>
-
+ 
+  <%- include('./header.ejs'); %>
 
 <div class="container p-2 " style="border-radius: 40px;">
   <div class="card  ">
@@ -164,12 +66,9 @@
       </div>
     </div>
   </div>
-</div><br><br><br>
-
-<div class="p-5 container-fluid text-center text-white bg-dark">
-  <h4>copyright © 2022 all rights reserved by Aman kumar
-  </h4>
 </div>
+
+<%- include('./footer.ejs'); %>
 
 
 <!-- Op
